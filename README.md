@@ -10,7 +10,8 @@
 
 ## Выполнить практическое задание:
 
-1. Создайте проект **MapLab** с классом `MapSetTester` и статическим методом `main()`. Вам нужно будет использовать классы `HashMap` и `TreeSet`
+1. Создайте проект **MapLab** с классом `MapSetTester` и статическим методом `main()`. Вам нужно будет использовать 
+   классы `HashMap` и `TreeSet`
 
 2. В методе `main()` создайте словарь `HashMap` с именем `networkMap`, в котором будут храниться данные в виде пары ключ и
    значение. Ключ - имя телеканала (строка), а значение - это множество типа TreeSet, который содержит телевизионные
@@ -39,39 +40,39 @@
        Input tv network: FOX
        Input tv show on FOX: The Simpsons
        {FOX=[The Simpsons]}
-    
+
        Input tv network: NBC
        Input tv show on NBC: ER
        {FOX=[The Simpsons], NBC=[ER]}
-    
+
        Input tv network: ABC
        Input tv show on ABC: 20/20
        {FOX=[The Simpsons], NBC=[ER], ABC=[20/20]}
-    
+
        Input tv network: CBS
        Input tv show on CBS: Survivor
        {CBS=[Survivor], FOX=[The Simpsons], NBC=[ER], ABC=[20/20]}
-    
+
        Input tv network: ABC
        Input tv show on ABC: Lost
        {CBS=[Survivor], FOX=[The Simpsons], NBC=[ER], ABC=[20/20, Lost]}
-    
+
        Input tv network: FOX
        Input tv show on FOX: Family Guy
        {CBS=[Survivor], FOX=[Family Guy, The Simpsons], NBC=[ER], ABC=[20/20, Lost]}
-    
+
        Input tv network: CBS
        Input tv show on CBS: CSI
        {CBS=[CSI, Survivor], FOX=[Family Guy, The Simpsons], NBC=[ER], ABC=[20/20, Lost]}
-    
+
        Input tv network: FOX
        Input tv show on FOX: American Idol
        {CBS=[CSI, Survivor], FOX=[American Idol, Family Guy, The Simpsons], NBC=[ER], ABC=[20/20, Lost]}
-    
+
        Input tv network: ABC
        Input tv show on ABC: Desperate Housewives
        {CBS=[CSI, Survivor], FOX=[American Idol, Family Guy, The Simpsons], NBC=[ER], ABC=[20/20, Desperate Housewives, Lost]}
-    
+
        Input tv network: NBC
        Input tv show on NBC: Law And Order
        {CBS=[CSI, Survivor], FOX=[American Idol, Family Guy, The Simpsons], NBC=[ER, Law And Order], ABC=[20/20, Desperate Housewives, Lost]}
