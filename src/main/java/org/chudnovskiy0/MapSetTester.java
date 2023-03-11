@@ -3,24 +3,30 @@ package org.chudnovskiy0;
 import java.util.*;
 
 public class MapSetTester {
-    private static final Scanner scanner = new Scanner(System.in);
     private static final Map<String, TreeSet<String>> networkMap = new HashMap<>();
 
     public static void main(String[] args) {
         addTvShow();
+
+        System.out.println("-".repeat(20));
+        List sortedKeys=new ArrayList(networkMap.keySet());
+        Collections.sort(sortedKeys);
+        for (Object key: sortedKeys) {
+            System.out.println(key + " -> " + networkMap.get(key));
+        }
     }
 
     private static void addTvShow() {
+        int i = 0;
         do {
             setTvChannel();
             System.out.println(networkMap);
             System.out.println("-".repeat(20));
-        } while (true);
+        } while (++i < 10);
     }
 
     private static void setTvChannel() {
-        System.out.print(">>> Input tv network -> \t");
-        String tvNetwork = scanner.nextLine();
+        String tvNetwork = new ConsoleInput().askStr(">>> Input tv network -> \t");
         //TODO: проверка ключа(канала) в списке ключей
         if (!networkMap.containsKey(tvNetwork)) {
             TreeSet<String> treeSet = new TreeSet<>();
@@ -35,7 +41,6 @@ public class MapSetTester {
     }
 
     private static String getTvShowTitle(String tvNetwork) {
-        System.out.print(">>> Input tv show on " + tvNetwork + " ->\t");
-        return scanner.nextLine();
+        return new ConsoleInput().askStr(">>> Input tv show on " + tvNetwork + " ->\t");
     }
 }
